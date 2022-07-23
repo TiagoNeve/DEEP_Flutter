@@ -31,20 +31,15 @@ class MeuApp extends StatelessWidget {
         // ),
 
         body: Container(
-          color: Colors.red,
           child: Row(
             children: [
-              Expanded(
-                child: Text('NOME'),
-              ),
-              Expanded(
-                child: Text('SOBRENOME'),
-              ),
-              Expanded(
-                child: Text('IDADE'),
-              ),
-            ],
-          ),
+              Icon(Icons.star, color: Colors.green),
+              Icon(Icons.star, color: Colors.green),
+              Icon(Icons.star, color: Colors.green),
+              Icon(Icons.star, color: Colors.black),
+              Icon(Icons.star, color: Colors.black),
+            ]
+          )
         ),
       ),
 
