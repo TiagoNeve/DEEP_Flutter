@@ -1,4 +1,6 @@
 // Sempre importar essa lib
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 // Função principal
@@ -10,15 +12,21 @@ class MeuApp extends StatelessWidget {
   // Construção do build
   @override
   Widget build(BuildContext context) {
-    // Informa que terá um widget no centro
-    return Center(
-      child: Text(
-        // String com o conteúdo
-        'Olá Mundo, Flutter Nível 1',
-        // Informando que a direção do texto é da esquerda para a direita
-        textDirection: TextDirection.ltr,
+    
+    return MaterialApp(
+
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Meu Primeiro App'),
+          backgroundColor: Colors.black,
+        ),
+        body: Center(
+          child: Text('Olá Mundo'),
+        ),
       ),
+
     );
+
   }
 
 }
