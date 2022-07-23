@@ -1,5 +1,5 @@
 // Sempre importar essa lib
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -20,8 +20,31 @@ class MeuApp extends StatelessWidget {
           title: Text('Meu Primeiro App'),
           backgroundColor: Colors.black,
         ),
-        body: Center(
-          child: Text('Olá Mundo'),
+        // O conteúdo fica na parte de cima da esquerda para direita, no canto superior esquerdo
+        // body: Container(
+        //   child: Text('Texto de exemplo'),
+        // ),
+
+        // Centraliza o conteúdo verticalmente e horizontalmente
+        // body: Center(
+        //   child: Text('Texto de exemplo'),
+        // ),
+
+        body: Container(
+          color: Colors.red,
+          child: Row(
+            children: [
+              Expanded(
+                child: Text('NOME'),
+              ),
+              Expanded(
+                child: Text('SOBRENOME'),
+              ),
+              Expanded(
+                child: Text('IDADE'),
+              ),
+            ],
+          ),
         ),
       ),
 
