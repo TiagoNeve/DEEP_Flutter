@@ -20,31 +20,47 @@ class MeuApp extends StatelessWidget {
           title: Text('Meu Primeiro App'),
           backgroundColor: Colors.black,
         ),
-        // O conteúdo fica na parte de cima da esquerda para direita, no canto superior esquerdo
-        // body: Container(
-        //   child: Text('Texto de exemplo'),
-        // ),
 
-        // Centraliza o conteúdo verticalmente e horizontalmente
-        // body: Center(
-        //   child: Text('Texto de exemplo'),
-        // ),
+        body: Column(
+          children: [
+            // Elemento 1
+            Row(
+              children: [
+                containerInExpanded(200, Colors.red)
+              ],
+            ),
 
-        body: Container(
-          child: Row(
-            children: [
-              Icon(Icons.star, color: Colors.green),
-              Icon(Icons.star, color: Colors.green),
-              Icon(Icons.star, color: Colors.green),
-              Icon(Icons.star, color: Colors.black),
-              Icon(Icons.star, color: Colors.black),
-            ]
-          )
+            // Elemento 2
+            Row(
+              children: [
+                containerInExpanded(100, Colors.blue),
+                containerInExpanded(100, Colors.green)
+              ],
+            ),
+
+            // Elemento 3
+            Row(
+              children: [
+                containerInExpanded(100, Colors.yellow),
+                containerInExpanded(100, Colors.orange),
+                containerInExpanded(100, Colors.black),
+              ],
+            )
+          ],          
         ),
       ),
 
     );
 
+  }
+
+  Widget containerInExpanded(double altura, Color cor) {
+    return Expanded(
+      child: Container(
+        height: altura,
+        color: cor,
+      ),
+    );
   }
 
 }
