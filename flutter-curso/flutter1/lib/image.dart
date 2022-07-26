@@ -6,7 +6,6 @@ class MeuApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
 
       home: Scaffold(
@@ -15,13 +14,20 @@ class MeuApp extends StatelessWidget {
           backgroundColor: Colors.black,
         ),
 
-        body: Center(
-          child: Text('...'),
+        body: Column(
+          children: [
+            Image(
+              width: 100,
+              image: AssetImage('logo.jpg'),
+            ),
+            
+            Image.network('https://docs.flutter.dev/assets/images/dash/dash-fainting.gif'),
+
+          ]
         ),
       ),
 
     );
-
   }
 
 }
