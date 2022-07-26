@@ -1,8 +1,16 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() => runApp( MeuApp() );
 
 class MeuApp extends StatelessWidget {
+
+  var textStyle = TextStyle( 
+    fontSize: 30,
+    color: Colors.red,
+    fontWeight: FontWeight.bold
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +24,16 @@ class MeuApp extends StatelessWidget {
         ),
 
         body: Center(
-          child: Text('...'),
+          child: Column(
+            children: [
+              Text(
+                'Título Legal',
+                style: textStyle,  
+              ), 
+              Icon(Icons.star, size:40, color: Colors.blue),
+              TextButton(onPressed: null, child: Text('Clique aqui'))
+            ],
+          )
         ),
       ),
 
