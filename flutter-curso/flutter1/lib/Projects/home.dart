@@ -52,9 +52,9 @@ class home extends StatelessWidget {
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                helperIcons(Icon(Icons.call, color: Colors.blue), Text('Ligar')),
-                                helperIcons(Icon(Icons.location_on, color: Colors.blue), Text('Endereço')),
-                                helperIcons(Icon(Icons.share, color: Colors.blue), Text('Compartilhar')),
+                                helperIcons(Icon(Icons.call, color: Colors.blue), Text('Ligar', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),)),
+                                helperIcons(Icon(Icons.location_on, color: Colors.blue), Text('Endereço', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),)),
+                                helperIcons(Icon(Icons.share, color: Colors.blue), Text('Compartilhar', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),)),
                               ],
                             ),
                         ),
@@ -78,11 +78,14 @@ class home extends StatelessWidget {
 
   Widget helperIcons(Icon icone, Text texto)
   {
-    return Column(
-      children: [
-        icone,
-        texto
-      ],
+    return TextButton(
+      onPressed: () {print('Aewww');},
+      child: Column(
+        children: [
+          icone,
+          texto
+        ],
+      ) 
     );
   }
 
